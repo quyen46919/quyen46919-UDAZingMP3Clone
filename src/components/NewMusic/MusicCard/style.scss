@@ -1,0 +1,74 @@
+@import '../../../../assets/scss/mixins/index.scss';
+@import '../../../../assets/scss/variables/index.scss';
+
+.card {
+    width: 217px;
+    height: 217px;
+    margin-bottom: 50px;
+
+    &__avt {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        text-transform: none;
+        @include displayFlex;
+        &:hover .avt_image {
+            opacity: 0.5;
+            transform: scale(1.08);
+            cursor: pointer;
+        }
+        &:hover .playlist-action {
+            opacity: 1;
+            z-index: 10;
+            cursor: pointer;
+        }
+    }
+    &__title {
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19px;
+        &:hover {
+            color: $purple;
+        }
+    }
+    &__name-singer {
+        opacity: 0.5;
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 18px;
+        max-width: 100%;
+        @include textOverflowEllipsis(1);
+    }
+    &__name-sing:hover {
+        color: $purple;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    img {
+        @include imgCover;
+        transition: transform 0.6s ease;
+    }
+}
+.playlist-action {
+    gap: 20px;
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    @include displayFlex($direc: row);
+    .play_icon {
+        width: 55px;
+        height: 55px;
+    }
+    &:hover {
+        opacity: 0.7;
+    }
+}
