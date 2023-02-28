@@ -12,12 +12,21 @@
     $align: center
 ) {
     display: flex;
+    justify-content: $justy;
+    align-items: $align;
+    flex-wrap: $wrap;
     flex-direction: $direc;
+}
+@mixin displayFlexSmall(
+    $justy: center,
+    $align: center,
+    $wrap: wrap,
+){
+    display: flex;
     justify-content: $justy;
     align-items: $align;
     flex-wrap: $wrap;
 }
-
 @mixin displayGrid($minWidth: 260px) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax($minWidth, 1fr));

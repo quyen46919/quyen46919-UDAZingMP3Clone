@@ -1,0 +1,24 @@
+@import '../../../assets/scss/mixins/index.scss';
+@import '../../../assets/scss/variables/index.scss';
+
+
+.partner-list{
+    width: 80%;
+    height: auto;
+    @include displayFlexSmall(center,center,wrap);
+    margin: 10px 10px;
+    margin: 0 auto;
+    
+    &__title{
+        text-align: center;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        color: darkgrey;
+        width: 100%;
+        cursor: pointer;
+    }
+    &__title:hover{
+        cursor: pointer;
+        color: $white;
+    }
+
+}
