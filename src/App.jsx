@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import './App.css';
-import Home from './pages/home';
-
+import React from "react";
+import "./App.css";
+import "./pages/Header";
+import Home from "./pages/home";
 function App() {
   return (
     <div className="App">
