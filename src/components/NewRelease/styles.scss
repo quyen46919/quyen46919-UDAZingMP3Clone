@@ -1,0 +1,19 @@
+@import "/assets/scss/mixins/index.scss";
+@import "/assets/scss/variables/index.scss";
+
+.new-release {
+    
+    &__heading {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__nav {
+      @include displayFlex($direc: row, $wrap: nowrap, $justy: space-between, $align: center);
+    }
+
+    &__tabs {
+      @include displayFlex($direc: row, $wrap: nowrap, $justy: space-between, $align: center);
+      gap: 15px;
+    }
+}
