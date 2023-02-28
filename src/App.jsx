@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import PartnerList from './components/PartnerList';
 import Home from './pages/home';
 
 function App() {
