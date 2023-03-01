@@ -1,0 +1,161 @@
+@import "../../../assets/scss/mixins/index.scss";
+@import "../../../assets/scss/variables/index.scss";
+@import "../../../assets/scss/mixins/reponse.scss";
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.Headers {
+  position: fixed;
+  width: calc(100% - 240px);
+  margin-left: 240px;
+  float: right;
+  height: 70px;
+  padding: 0 68px 0 60px;
+  gap: 10px;
+  @include displayFlex($direc: row, $justy: flex-start);
+  color: white;
+  background-color: rgba($color: #170f23, $alpha: 0.2);
+  @include respond(xl) {
+    width: calc(100% - 240px);
+    margin-left: 240px;
+  }
+  @include respond(lg) {
+    width: calc(100% - 240px);
+    margin-left: 240px;
+    padding-right: 68px;
+    padding-left: 60px;
+  }
+  @include respond(md) {
+    width: calc(100% - 30px);
+    margin-left: 70px;
+    padding-left: 30px;
+  }
+  @include respond(sm) {
+    width: 630px;
+  }
+  &__left {
+    @include displayFlex($direc: row, $justy: flex-end);
+    gap: 20px;
+    width: 64%;
+    @include respond(xl) {
+      justify-content: flex-start;
+      margin-right: 200px;
+    }
+    @include respond(xlsm) {
+      justify-content: flex-start;
+      margin-right: 0;
+    }
+    @include respond(lg) {
+      justify-content: flex-start;
+      margin-right: 0;
+    }
+  }
+  &__right {
+    gap: 10px;
+    @include displayFlex($direc: row, $justy: flex-end);
+    @include respond(xl) {
+      width: auto;
+    }
+    @include respond(md) {
+      width: auto;
+    }
+  }
+
+  &__translate {
+    @include displayFlex($direc: row, $justy: flex-start);
+    gap: 24px;
+    &--left,
+    &--right,
+    &--left:focus,
+    &--right:focus {
+      padding: 0;
+      background-color: transparent;
+      color: white;
+      font-size: 18px;
+      @include buttonBorder();
+    }
+  }
+
+  &__list {
+    width: 100%;
+    padding-left: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    max-height: 300px;
+    overflow-y: scroll;
+    &--title {
+      width: 250px;
+    }
+    &--suggest {
+      margin-top: 10px;
+    }
+    &--suggest li a {
+      @include displayFlex($direc: row);
+      gap: 10px;
+    }
+    &--title {
+      font-size: 14px;
+      font-weight: 700;
+      color: $white;
+    }
+    &--suggest li,
+    a {
+      @include displayFlex($justy: flex-start, $direc: row);
+      padding: 0 8px;
+      height: 40px;
+      list-style: none;
+      font-size: 14px;
+      font-weight: 400;
+      border-radius: 10px;
+      color: $white;
+    }
+    &--suggest li:hover {
+      background-color: rgba($color: #271545, $alpha: 0.5);
+    }
+  }
+  &__dowloadTitle {
+    color: violet;
+    font-size: 15px;
+    width: 190px;
+    @include displayFlex($direc: row);
+  }
+  &__dowload,
+  &__dowload:focus {
+    @include displayFlex($direc: row);
+    @include padding(14px 25px);
+    gap: 5px;
+    width: 190px;
+    height: 39px;
+    @include buttonBorder();
+    border-radius: 50px;
+    color: $violet;
+    background-color: rgba($color: #2f2739, $alpha: 1);
+    &:hover {
+      color: darken($color: $violet, $amount: 10);
+    }
+  }
+  &__icon {
+    @include displayFlex($direc: row);
+    gap: 12px;
+    &--chude,
+    &--vip,
+    &--install {
+      @include circles();
+    }
+    &--user {
+      @include circles();
+      background-color: $gray;
+    }
+  }
+}
+.title {
+  width: 100px;
+  height: 50px;
+}
