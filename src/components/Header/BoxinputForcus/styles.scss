@@ -1,0 +1,49 @@
+@import "../../../../assets/scss/mixins/index.scss";
+@import "../../../../assets/scss/mixins/reponse.scss";
+@import "../../../../assets/scss/variables/index.scss";
+
+.Headers__inputForcus {
+  position: relative;
+  width: 85%;
+  height: 39px;
+  &--input {
+    @include displayFlex($direc: row);
+    width: 100%;
+    @include padding($padding: 0 8px 0 0);
+    height: 39px;
+    border-radius: 50px;
+    color: $white;
+    background-color: transparent;
+  }
+  &--search,
+  &--search:focus {
+    width: 40px;
+    padding: 0;
+    font-size: large;
+    color: $white;
+    background-color: transparent;
+    @include buttonBorder();
+  }
+  &--box {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    @include buttonBorder();
+    color: $white;
+    font-size: 14px;
+    background-color: transparent;
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  &--posi {
+    position: absolute;
+    top: 0;
+    @include padding($padding: 0px 10px 10px 8px);
+    width: 100%;
+    height: auto;
+    background-color: #34224f;
+    border-radius: 20px;
+  }
+}
