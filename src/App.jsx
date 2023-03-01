@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import './App.css';
-import Partner from './components/Partner';
+import PartnerList from './components/PartnerList';
 import Home from './pages/home';
 
 function App() {
     return (
         <div className="App">
             <Home />
-            <Partner />
         </div>
     );
 }

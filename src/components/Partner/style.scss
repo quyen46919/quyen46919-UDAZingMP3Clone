@@ -1,4 +1,19 @@
-.Partner{
-    width: 100px;
-    height: auto;
+.partner{
+    width: 12%;
+    height: 100px;
+    background: #fff;
+    padding: 5px 15px;
+    margin: auto;
+    margin-left: 1px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 60%;
+        height: auto;
+        display: flex;
+    }
 }
