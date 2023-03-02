@@ -1,0 +1,139 @@
+@import '../../../assets/scss/mixins/index.scss';
+@import '../../../assets/scss/variables/index.scss';
+
+$paddingItem: 13px;
+$sizeThum: 120px;
+
+.newmusic {
+    color: $white;
+    position: absolute;
+    left: $menuWidth;
+    max-width: calc(100% - $menuWidth);
+    width: 100%;
+    padding: 50px;
+    @include maxWidth(1125px) {
+        left: $menuWidthRes;
+        max-width: calc(100% - $menuWidthRes);
+    }
+    @include maxWidth(530px) {
+        left: 0;
+        max-width: 100%;
+        padding: 20px;
+    }
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        &-name {
+            font-size: 20px;
+        }
+        &-all {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            cursor: pointer;
+            &:hover {
+                color: $green;
+            }
+        }
+        &-icon {
+            font-size: 20px;
+        }
+    }
+    &__item--viewall {
+        @include displayFlex(row, unknow, center, center);
+        height: calc($sizeThum + ($paddingItem * 2));
+        background-color: $bg-item;
+        color: $gray;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+            color: $green;
+        }
+    }
+    &__item {
+        display: flex;
+        background-color: $bg-item;
+        padding: $paddingItem;
+        border-radius: 7px;
+        cursor: pointer;
+        &-thum {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease-in-out;
+        }
+        &-group {
+            @include displayFlex(column, unknow, space-between, unknow);
+            width: 100%;
+        }
+        &-img {
+            width: $sizeThum;
+            height: $sizeThum;
+            flex-shrink: 0;
+            overflow: hidden;
+            margin-right: 10px;
+            border-radius: inherit;
+            position: relative;
+        }
+        &-icon--play {
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            transform: translate(50%, -50%);
+            font-size: 40px;
+            display: none;
+        }
+        &-name {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.38;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+        }
+        &-singer {
+            display: block;
+            font-size: 12px;
+            margin-top: 3px;
+            opacity: 0.7;
+            cursor: pointer;
+            font-weight: 400;
+            &:hover {
+                color: $green;
+                opacity: 1;
+            }
+        }
+        &-other {
+            @include displayFlex(row, unknow, space-between, end);
+            opacity: 0.7;
+        }
+        &-trending {
+            -webkit-text-stroke-width: 0.3px;
+            -webkit-text-stroke-color: rgb(255, 255, 255);
+            font-size: 40px;
+            color: transparent;
+            font-weight: 700;
+            line-height: 40px;
+        }
+        &-time {
+            font-size: 15px;
+        }
+    }
+    &__item-img:hover &__item-icon--play {
+        display: block;
+    }
+    &__item-img:hover &__item-thum {
+        filter: brightness(60%);
+        transform: scale(1.15);
+    }
+    &__item-icon--play:hover {
+        opacity: 0.8;
+    }
+}

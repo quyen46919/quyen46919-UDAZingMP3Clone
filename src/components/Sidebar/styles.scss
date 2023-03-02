@@ -1,0 +1,102 @@
+@import '../../../assets/scss/variables/index.scss';
+@import '../../../assets/scss/mixins/index.scss';
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: $menuWidth;
+    width: 100%;
+    height: 100vh;
+    background-color: $bg-sidebar;
+
+    @include maxWidth($md) {
+        max-width: $menuWidthRes;
+    }
+
+    &__logo {
+        display: inline-block;
+        width: 240px;
+        height: 70px;
+        padding-top: 18px;
+        padding-left: 25px;
+        margin-bottom: -16px;
+        background: url(https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg) 25% / contain
+            no-repeat;
+        background-size: 120px 40px;
+
+        @include maxWidth($md) {
+            background: url(https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.1/static/media/icon_zing_mp3_60.f6b51045.svg)
+                8% / contain no-repeat;
+            background-size: 45px;
+        }
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+
+        img {
+            width: 120px;
+            object-fit: cover;
+        }
+    }
+
+    &__btn {
+        @include displayFlex(row, $justy: start);
+        gap: 8px;
+
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: $menuWidth;
+        padding: 16px 28px;
+        border-top: 1px solid $border-primary;
+        border-radius: 0;
+        background-color: #1b2639;
+        color: $white;
+        font-size: 14px;
+        font-weight: 600;
+        outline: none;
+
+        @include maxWidth($md) {
+            justify-content: center;
+            max-width: $menuWidthRes;
+            padding: 16px 0;
+        }
+
+        &:hover {
+            border-color: transparent;
+            border-top: 1px solid $border-primary;
+            opacity: 0.8;
+        }
+
+        &:focus,
+        &:focus-visible {
+            outline: none;
+        }
+
+        &--icon-plus {
+            width: 25px;
+        }
+
+        &--icon-plus,
+        span {
+            @include maxWidth($md) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            display: none;
+
+            @include maxWidth($md) {
+                @include displayFlex(row);
+                width: 40px;
+                height: 40px;
+                background-color: hsla(0, 0%, 100%, 0.1);
+                border-radius: 50%;
+                line-height: 40px;
+            }
+        }
+    }
+}

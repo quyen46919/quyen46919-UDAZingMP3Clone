@@ -1,9 +1,22 @@
 $bg-primary: #0f1a2e;
 $bg-secondary: #1d2a49;
 $black: #000000;
+$black-medium: #32323d;
 $white: #ffffff;
 $gray: #567fa8;
+$yellow: #ffdb00;
+$bg-sidebar: hsla(0, 0%, 100%, 0.05);
+$border-primary: hsla(0, 0%, 100%, 0.1);
+$green: #0daf94;
+$bg-item: hsla(0, 0%, 100%, 0.1);
 
 // size
-$menuWidth: 300px;
-$menuWidthRes: 100px;
+$menuWidth: 240px;
+$menuWidthRes: 80px;
+
+// breakpoint
+$xs: 0px;
+$sm: 600px;
+$md: 900px;
+$lg: 1200px;
+$xl: 1536px;
