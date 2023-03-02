@@ -1,0 +1,11 @@
+.song-slide{
+    height: auto;
+    width: 33.33%;
+    & img{
+        border-radius: 4px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+}

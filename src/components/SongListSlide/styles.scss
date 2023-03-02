@@ -1,0 +1,52 @@
+@import '../../../assets/scss/variables/index.scss';
+@import '../../../assets/scss/mixins/index.scss';
+    ::-webkit-scrollbar {
+    display: none;
+    }
+.list-slide{
+    margin-left: $menuWidth;
+    position: relative;
+    padding: 32px 50px 0 50px;
+    box-sizing: border-box;
+    @include  displayFlex(row,nowrap,space-between,center);
+    max-width: calc(100vw - $menuWidth);
+    gap: 40px;
+    &:hover .next-slide,&:hover .prev-slide{
+         @include  displayFlex(row,nowrap,center,center);
+    }
+    & .next-slide, .prev-slide{
+        display: none;
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+        background-color: rgba($color: $white, $alpha: 0.3);
+        top:50%;
+        transform: translateY(-50%);
+        position: absolute;
+        cursor: pointer;
+    }
+    & .next-slide{
+        right: 55px; 
+    }
+    & .next-slide:hover, & .prev-slide:hover{
+        opacity: 0.6;
+    }
+    & .prev-slide{
+        left: 55px;
+    }
+     @include maxWidth($md){
+        margin-left: 50px;
+        max-width: calc(100vw - 40px);
+        & .song-slide{
+        width: 49%;
+        &:nth-child(3){
+            display: none;
+            }
+        }
+    } 
+
+     @include maxWidth($sm){
+         max-width: calc(100vw - 40px);
+        //  overflow-y: hidden;
+    } 
+}
