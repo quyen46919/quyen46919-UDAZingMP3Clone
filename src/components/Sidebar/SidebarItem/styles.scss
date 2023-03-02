@@ -1,0 +1,66 @@
+@import '../../../../assets/scss/variables/index.scss';
+@import '../../../../assets/scss/mixins/index.scss';
+
+.item {
+  padding: 10px 0;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &--active {
+    background-color: hsla(0, 0%, 100%, 0.1);
+    border-color: #9b4de0;
+
+    @include maxWidth($md) {
+      border-color: transparent;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    @include displayFlex(row, $justy: start);
+    gap: 8px;
+
+    color: $white;
+    font-weight: 600;
+    padding-left: 25px;
+
+    &:hover {
+      color: white;
+    }
+
+    &--title {
+      font-size: 13px;
+      text-transform: capitalize;
+    }
+
+    *:not(:first-child) {
+      @include maxWidth($md) {
+        display: none;
+      }
+    }
+  }
+
+  &:hover &__icon-play {
+    display: flex;
+
+    @include maxWidth($md) {
+      display: none;
+    }
+  }
+
+  &__icon-play {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+  }
+}
