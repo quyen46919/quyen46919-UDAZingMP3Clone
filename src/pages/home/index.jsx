@@ -1,6 +1,6 @@
 import React from 'react';
-import PartnerList from '../../components/PartnerList';
 import './styles.scss';
+import PartnerList from '../../components/PartnerList'
 
 Home.propTypes = {};
 

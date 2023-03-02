@@ -1,15 +1,15 @@
 import React from 'react';
-import './style.scss'
+// import PropTypes from 'prop-types';
 
 // Partner.propTypes = {
-//     images: PropTypes.string.isRequired,
+    
 // };
-
+import './style.scss'
 function Partner(props) {
-    const {images} = props;
+    const {images, details} = props
     return (
         <div className='partner'>
-            <img className='partner__images' src={images} />
+            <img className='partner__i' src={images} alt={details} />
         </div>
     );
 }

@@ -1,15 +1,19 @@
 .partner-list{
     width: 100%;
     height: auto;
-    margin: 0 auto;
-    padding: 10px 10px;
+    // background: #fff;
     display: flex;
-    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-
-    span{
+    margin: 10px 10px;
+    margin: 0 auto;
+    
+    &__title{
         text-align: center;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
         color: darkgrey;
-
+        width: 100%;
     }
+
 }

@@ -2,18 +2,16 @@
     width: 12%;
     height: 100px;
     background: #fff;
-    padding: 5px 15px;
-    margin: auto;
-    margin-left: 1px;
-    border-radius: 10px;
-    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px 5px;
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius: 10px;
 
-    img{
-        width: 60%;
+    &__i{
+        width: 50%;
         height: auto;
-        display: flex;
     }
 }
