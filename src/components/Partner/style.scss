@@ -1,0 +1,17 @@
+.partner{
+    width: 12%;
+    height: 100px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius: 10px;
+
+    &__i{
+        width: 50%;
+        height: auto;
+    }
+}
