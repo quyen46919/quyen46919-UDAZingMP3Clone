@@ -1,0 +1,30 @@
+@import '../../../assets/scss/mixins/index.scss';
+@import '../../../assets/scss/variables/index.scss';
+.new_music {
+    margin-left: 50px;
+    margin-left: $menuWidth;
+    @include customScrollBar;
+}
+.cards {
+    gap: 28px;
+    margin-left: 38px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    background-color: $bg-primary;
+}
+.headline {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-left: 46px;
+    padding-bottom: 20px;
+    background-color: $bg-primary;
+    justify-content: space-between;
+}
+
+@include maxWidth($md) {
+    .new_music {
+        margin-left: $menuWidthRes;
+    }
+}
