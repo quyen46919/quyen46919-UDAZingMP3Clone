@@ -13,10 +13,6 @@ function Home(props) {
       <PartnerList />
     </div>
   );
-
-    // return <div className="home">
-    //     <PartnerList />
-    // </div>;
 }
 
 export default Home;
