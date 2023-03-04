@@ -1,15 +1,11 @@
 import React from "react";
-import Trading from "../../components/trading/zing005";
+import SongList from "../../components/SongList";
 import "./styles.scss";
 
 Home.propTypes = {};
 
 function Home(props) {
-  return (
-    <div className="home">
-      <Trading />
-    </div>
-  );
+  return <div className="home">{<SongList></SongList>}</div>;
 }
 
 export default Home;

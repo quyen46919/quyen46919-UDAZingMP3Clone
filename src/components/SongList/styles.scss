@@ -1,0 +1,111 @@
+@import "../../../assets/scss/mixins/index.scss";
+@import "../../../assets/scss/variables/index.scss";
+
+h3 {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+
+.song__list {
+  left: $menuWidth;
+  position: absolute;
+  width: 100%;
+  max-width: calc(100% - $menuWidth);
+  height: auto;
+  @include maxWidth(1120px) {
+    left: $menuWidthRes;
+    width: calc(100% - $menuWidthRes);
+  }
+  @include maxWidth(530px) {
+    left: $menuWidthRes;
+    width: calc(100% - $menuWidthRes);
+  }
+}
+.song__card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.song__card-container {
+  width: 230px;
+  height: 230px;
+  &--img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: azure;
+    overflow: hidden;
+    position: relative;
+    @include maxWidth(70%) {
+      width: 95%;
+      height: 95%;
+    }
+    @include maxWidth(30%) {
+      width: 80%;
+      height: 80%;
+    }
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.2s;
+    }
+    &:hover > img {
+      transform: scale(1.2);
+      filter: brightness(65%);
+    }
+  }
+  &--heart {
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    display: none;
+    color: white;
+    font-size: 200%;
+    position: absolute;
+  }
+  &--play {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    color: white;
+    font-size: 230%;
+    position: absolute;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &--dots {
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    display: none;
+    color: white;
+    font-size: 200%;
+    position: absolute;
+  }
+  &--text {
+    width: 100%;
+    height: auto;
+    @include textOverflowEllipsis(2);
+    &-author {
+      width: 80%;
+      color: white;
+    }
+    &-name {
+      color: white;
+    }
+  }
+}
+
+.song__card-container--img:hover .song__card-container--play,
+.song__card-container--img:hover .song__card-container--heart,
+.song__card-container--img:hover .song__card-container--dots {
+  display: block;
+}
