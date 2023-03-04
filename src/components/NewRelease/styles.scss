@@ -2,18 +2,53 @@
 @import "/assets/scss/variables/index.scss";
 
 .new-release {
+  padding: 49px 24px 0 240px;
     
-    &__heading {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
+  &__heading {
+      font-size: 20px;
+      margin-bottom: 20px;
+  }
 
-    &__nav {
-      @include displayFlex($direc: row, $wrap: nowrap, $justy: space-between, $align: center);
-    }
+  &__nav {
+    @include displayFlex($direc: row, $wrap: nowrap, $justy: space-between, $align: center);
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
 
-    &__tabs {
-      @include displayFlex($direc: row, $wrap: nowrap, $justy: space-between, $align: center);
-      gap: 15px;
-    }
+  &__tabs {
+    @include displayFlex($direc: row, $wrap: nowrap, $justy: space-between, $align: center);
+    gap: 15px;
+  }
+  
+  &__tab {
+    border: 1px solid $black;
+    border-radius: 100px;
+    background-color: transparent;
+    padding: 4px 24px;
+    border: 1px solid #ffffff1a;
+  }
+
+  &__tab:hover {
+    filter: brightness(.9);
+    transition: all .2s;
+  }
+
+  &__tab.active {
+    background-color: #9b4de0;
+  }
+
+  &__showAll {
+    color: #ffffff80;
+    cursor: pointer;
+  }
+
+  &__showAll:hover {
+    color: #9b4de0;
+    transition: all .2s;
+  }
+
+  &__music-wrapper {
+      @include displayFlex($direc: row, $wrap: wrap, $justy: flex-start, $align: center);
+      gap:2%;
+  }
 }
