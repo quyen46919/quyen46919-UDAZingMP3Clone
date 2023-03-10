@@ -2,7 +2,11 @@
 @import "/assets/scss/variables/index.scss";
 
 .new-release {
-  padding: 49px 24px 0 240px;
+  padding: 49px 59px;
+  margin-left: 240px;
+  @include maxWidth($md) {
+    margin-left: 80px;
+  }
     
   &__heading {
       font-size: 20px;
@@ -33,6 +37,10 @@
     transition: all .2s;
   }
 
+  &__tab:focus {
+    outline: none;
+  }
+
   &__tab.active {
     background-color: #9b4de0;
   }
@@ -48,7 +56,29 @@
   }
 
   &__music-wrapper {
-      @include displayFlex($direc: row, $wrap: wrap, $justy: flex-start, $align: center);
+      @include displayFlex($direc: row, $wrap: wrap, $justy: space-between, $align: center);
       gap:2%;
+  }
+
+  &__music-column {
+    width: 32%;
+    @include maxWidth($lg) {
+      width: 49%;
+    }
+    @include maxWidth($md) {
+      width: 100%;
+    }
+  }
+
+  &__music-column.column-2{
+    @include maxWidth($lg) {
+      display: none;
+    }
+  }
+
+  &__music-column.column-3{
+    @include maxWidth($md) {
+      display: none;
+    }
   }
 }
