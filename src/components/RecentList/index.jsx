@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './styles.scss';
 import RecentSong from '../RecentSong';
 import data from '../../test/data/datarecentlist';
 import ArrowNext from '../../../assets/icons/arrownext.svg';
+import './styles.scss';
 function RecentList(props) {
     const [recentList, setRecentList] = useState(data);
     return (

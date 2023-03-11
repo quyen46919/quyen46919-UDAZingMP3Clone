@@ -3,29 +3,28 @@ import HeartIcon from '../../../assets/icons/heart.svg';
 import PlayIcon from '../../../assets/icons/play.svg';
 import Dots from '../../../assets/icons/dots.svg';
 import './styles.scss';
-function RecentSong(props) {
+function recentSong(props) {
     const { thumbnail, title } = props;
     return (
-        <div className="recentSong" title={title}>
-            <div className="recentSong__img">
+        <div className="recent-song" title={title}>
+            <div className="recent-song__img">
                 <img src={thumbnail} alt="" />
-                <div className="recentSong-icons">
-                    <div className="recentSong-icon__left">
+                <div className="recent-song__icons">
+                    <div className="recent-song__icon--left">
                         <img src={HeartIcon} alt="" />
                     </div>
-                    <div className="recentSong-icon__center">
+                    <div className="recent-song__icon--center">
                         <img src={PlayIcon} alt="" />
                     </div>
-                    <div className="recentSong-icon__right">
+                    <div className="recent-song__icon--right">
                         <img src={Dots} alt="" />
                     </div>
                 </div>
-                <div className="recentSong__img--overlay"></div>
+                <div className="recent-song__img--overlay"></div>
             </div>
-
-            <p className="recentSong__title">{title}</p>
+            <p className="recent-song__title">{title}</p>
         </div>
     );
 }
 
-export default RecentSong;
+export default recentSong;

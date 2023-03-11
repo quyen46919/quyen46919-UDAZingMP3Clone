@@ -1,11 +1,9 @@
 @import '../../../assets/scss/variables/index.scss';
 @import '../../../assets/scss/mixins/index.scss';
-
 .recent-list{
     margin-top: 40px;
     margin-left: $menuWidth;
-    padding: 0 50px;
-    box-sizing: border-box;
+    @include padding( 0 50px);
     max-width: calc(100vw - $menuWidth);
     &__title{
         @include  displayFlex(row,nowrap,space-between,center);
@@ -37,10 +35,10 @@
         gap:20px;
     }
     @include maxWidth($md) {
-         margin-left: 50px;
-         max-width: calc(100vw - 40px);
-         &__wrapper .recentSong:nth-child(6){
+        margin-left: 50px;
+        max-width: calc(100vw - 40px);
+        &__wrapper .recentSong:nth-child(6){
             display: none;
-         }
+        }
     }
 }

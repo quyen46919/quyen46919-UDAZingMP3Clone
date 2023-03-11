@@ -24,5 +24,4 @@ function SongListSlide(props) {
         </div>
     );
 }
-
 export default SongListSlide;

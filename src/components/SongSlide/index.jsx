@@ -8,5 +8,4 @@ function SongSlide(props) {
         </div>
     );
 }
-
 export default SongSlide;
