@@ -1,0 +1,36 @@
+@import '../../../../assets/scss/mixins/index.scss';
+@import '../../../../assets/scss/variables/index.scss';
+
+.header__input {
+    @include displayFlex($direc: row);
+    @include padding($padding: 0 18px 0 8px);
+    width: 85%;
+    height: 39px;
+    border-radius: 50px;
+    color: $white;
+    background-color: rgba($color: #2f2739, $alpha: 0.5);
+    @include maxWidth($lg) {
+        flex-grow: 1;
+    }
+    &--search,
+    &--search:focus {
+        width: 40px;
+        padding: 0;
+        font-size: large;
+        color: $white;
+        background-color: transparent;
+        @include buttonBorder();
+    }
+    &--box {
+        flex-grow: 1;
+        height: 100%;
+        width: 100%;
+        @include buttonBorder();
+        color: $white;
+        font-size: 14px;
+        background-color: rgba($color: #2f2739, $alpha: 0.2);
+        &::placeholder {
+            color: $gray;
+        }
+    }
+}

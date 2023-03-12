@@ -1,12 +1,12 @@
-@import "../../../assets/scss/mixins/index.scss";
-@import "../../../assets/scss/variables/index.scss";
+@import '../../../assets/scss/mixins/index.scss';
+@import '../../../assets/scss/variables/index.scss';
 
 .home {
-  height: 100%;
-  width: 100%;
-  min-width: 100vw;
-  min-height: 100vh;
-  background-color: $bg-primary;
+    height: 100%;
+    width: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: $bg-primary;
 
-  position: relative;
+    position: relative;
 }
