@@ -4,7 +4,10 @@ $sizeImg: 200px;
 $paddingItem: 13px;
 .home__song-list {
   width: 100%;
-
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 15px;
   padding: 50px;
   position: absolute;
@@ -15,8 +18,9 @@ $paddingItem: 13px;
     max-width: calc(100% - $menuWidthRes);
   }
   @include maxWidth(530px) {
-    left: $menuWidthRes;
+    left: 0;
     max-width: 100%;
+    padding: 20px;
   }
 }
 .home__song {

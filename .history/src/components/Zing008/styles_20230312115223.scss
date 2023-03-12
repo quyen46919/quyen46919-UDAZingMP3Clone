@@ -4,9 +4,12 @@ $sizeImg: 200px;
 $paddingItem: 13px;
 .home__song-list {
   width: 100%;
-
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 15px;
-  padding: 50px;
+  @include padding($padding: 50px 0 0 0);
   position: absolute;
   left: $menuWidth;
   max-width: calc(100% - $menuWidth);
@@ -21,7 +24,7 @@ $paddingItem: 13px;
 }
 .home__song {
   @include displayFlex(column, unknow, flex-start, flex-start);
-  width: 200px;
+  width: 100%;
   height: calc($sizeImg + ($paddingItem * 2));
   padding: $paddingItem;
   border-radius: 7px;
@@ -29,6 +32,14 @@ $paddingItem: 13px;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
+  @include maxWidth(1125px) {
+    width: 95%;
+    height: 95%;
+  }
+  @include maxWidth(530px) {
+    width: 80%;
+    height: 80%;
+  }
   &--img {
     width: $sizeImg;
     height: $sizeImg;
@@ -47,16 +58,17 @@ $paddingItem: 13px;
   &--content {
     @include displayFlex(column, unknow, space-between, unknow);
     width: 100%;
-    cursor: pointer;
     & > h3 {
       width: 50%;
       color: $white;
       font-size: 14px;
       @include padding(10px 0 5px 0);
       @include textOverflowEllipsis(1);
+      cursor: pointer;
     }
     & > p {
       color: inherit;
+      cursor: pointer;
     }
   }
   &--icon-play {

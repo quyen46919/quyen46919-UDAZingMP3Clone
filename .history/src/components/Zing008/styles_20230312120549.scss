@@ -15,8 +15,9 @@ $paddingItem: 13px;
     max-width: calc(100% - $menuWidthRes);
   }
   @include maxWidth(530px) {
-    left: $menuWidthRes;
+    left: 0;
     max-width: 100%;
+    padding: 20px;
   }
 }
 .home__song {

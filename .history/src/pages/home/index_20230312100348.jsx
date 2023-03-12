@@ -1,5 +1,5 @@
 import React from "react";
-import Zing008 from "../../components/Zing008/Zing008";
+import Zing008 from "../../pages/home/index.jsx";
 import "./styles.scss";
 
 function Home(props) {
