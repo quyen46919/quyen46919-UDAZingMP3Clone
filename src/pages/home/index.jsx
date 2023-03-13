@@ -2,7 +2,6 @@ import Sidebar from '../../components/Sidebar';
 import NewMusic from './../../components/NewMusic/index';
 import './styles.scss';
 import React from 'react';
-import NewMusic from './../../components/NewMusic/index';
 
 Home.propTypes = {};
 

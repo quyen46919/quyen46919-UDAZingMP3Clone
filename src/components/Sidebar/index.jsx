@@ -10,7 +10,11 @@ function Sidebar(props) {
             <a href="#" className="sidebar__logo"></a>
             <SidebarList />
             <button className="sidebar__btn">
-                <img src={Plus} alt="Plus" className="sidebar__btn--icon-plus" />
+                <img
+                    src={Plus}
+                    alt="Plus"
+                    className="sidebar__btn--icon-plus"
+                />
                 <span>Tạo playlist mới</span>
                 <i className="sidebar__btn--mobile">
                     <img src={ArrowLeft} alt="ArrowLeft" />

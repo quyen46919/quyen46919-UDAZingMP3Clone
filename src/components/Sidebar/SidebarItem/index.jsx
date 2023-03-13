@@ -3,7 +3,8 @@ import { Play } from '../../Icons';
 import './styles.scss';
 
 function SidebarItem(props) {
-    const { id, title, icon, isPlay, isLive, handleActiveItem, activeItem } = props;
+    const { id, title, icon, isPlay, isLive, handleActiveItem, activeItem } =
+        props;
 
     return (
         <li
